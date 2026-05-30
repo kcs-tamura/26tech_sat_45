@@ -1,7 +1,29 @@
-export default function App() {
+import { Route, Routes } from "react-router-dom"
+import Header from "./components/Header"
+import ScrollToTop from "./components/ScrollToTop"
+import { useTheme } from "./hooks/useTheme"
+
+function HomePage(){
   return(
-    <div>
-      <h1>My Portfolio</h1>
-    </div>
+    <>
+    </>
+  )
+}
+
+
+export default function App() {
+
+  const {theme, toggle} = useTheme()
+
+  return(
+    <>
+      <ScrollToTop/>
+      <Header theme={theme} onThemeToggle={toggle}/>
+      <main>
+        <Routes>
+            <Route path="/" element={<HomePage/>}/>
+        </Routes>
+      </main>
+    </>
   )
 }

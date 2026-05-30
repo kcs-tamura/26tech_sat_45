@@ -1,13 +1,13 @@
 // src/components/Header.tsx
 
 import { Link } from "react-router-dom";
-import { profile } from "../data/portfolio";
+import { profile } from "../data/portfolio.ts";
 
 interface Props {
   theme: string;
   onThemeToggle: () => void;
 }
-
+// ここはエラー出てても大丈夫
 export default function Header({ theme, onThemeToggle }: Props) {
   const navItems = [{ label: "About", hash: "about" }];
 
@@ -32,7 +32,15 @@ export default function Header({ theme, onThemeToggle }: Props) {
                     ))}
                 </ul>
             </nav>
-            {/*// 来週の続きはここから再開しますー*/}
+
+            <button
+            className="theme-toggle"
+            onClick={onThemeToggle}
+            aria-label={theme === 'dark' ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+
         </div>
       </div>
     </header>
