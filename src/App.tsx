@@ -9,6 +9,7 @@ import Skills from "./components/Skills"
 import Works from "./components/Works"
 import WorkDetail from "./pages/WorkDetail"
 import Certifications from "./components/Certifications"
+import Contact from "./components/Contact"
 
 function HomePage(){
   return(
@@ -18,6 +19,7 @@ function HomePage(){
       <Skills/>
       <Works/>
       <Certifications/>
+      <Contact/>
     </>
   )
 }

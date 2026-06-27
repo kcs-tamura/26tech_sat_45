@@ -2,6 +2,8 @@
 
 import { Link } from "react-router-dom";
 import { profile } from "../data/portfolio.ts";
+import { FaSun } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa6";
 
 interface Props {
   theme: string;
@@ -9,7 +11,13 @@ interface Props {
 }
 // ここはエラー出てても大丈夫
 export default function Header({ theme, onThemeToggle }: Props) {
-  const navItems = [{ label: "About", hash: "about" }];
+  const navItems = [
+    { label: "About", hash: "about" },
+    { label: "Skills", hash: "skills" },
+    { label: "Works", hash: "works" },
+    { label: "Certs", hash: "certifications" },
+    { label: "Contact", hash: "contact" },
+  ];
 
   return (
     <header className="header">
@@ -38,7 +46,7 @@ export default function Header({ theme, onThemeToggle }: Props) {
             onClick={onThemeToggle}
             aria-label={theme === 'dark' ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? <FaSun/> : <FaMoon/> }
             </button>
 
         </div>

@@ -1,6 +1,7 @@
 // src/components/Hero.tsx
 
 import { profile } from "../data/portfolio";
+import SafeImg from "./SafeImg";
 
 export default function Hero(){
     return(
@@ -8,7 +9,13 @@ export default function Hero(){
             <div className="container">
 
                 {/* 顔写真乗っける所 */}
-                <div className="avatar-placeholder">T</div>
+                <div className="avatar-placeholder">
+                    <SafeImg
+                        src={profile.avatar}
+                        alt={profile.name}
+                        fallback={profile.nameEn.charAt(0)}
+                    />
+                </div>
                 <p className="hero-eyebrow">Portfolio</p>
                 
                 {/* 名前表示 */}
