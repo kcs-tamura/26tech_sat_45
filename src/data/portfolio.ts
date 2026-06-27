@@ -169,6 +169,30 @@ export const skills: Skill[] = [
     category: 'PF',    // フィルター用カテゴリ
     capabilities: [],
     note: "普段使いしている",
+  },
+  {
+    name: 'Rider-2',
+    version: '',
+    level: 20,            // 0〜100（後述）
+    category: 'PF',    // フィルター用カテゴリ
+    capabilities: [],
+    note: "普段使いしている",
+  },
+  {
+    name: 'Rider-3',
+    version: '',
+    level: 40,            // 0〜100（後述）
+    category: 'PF',    // フィルター用カテゴリ
+    capabilities: [],
+    note: "普段使いしている",
+  },
+  {
+    name: 'Rider-4',
+    version: '',
+    level: 60,            // 0〜100（後述）
+    category: 'PF',    // フィルター用カテゴリ
+    capabilities: [],
+    note: "普段使いしている",
   },// 田村が書いているものに関しては参考として記入しているだけなので真似しなくても大丈夫です。
 ]
 
@@ -188,7 +212,55 @@ export const works: Work[] = [
     team: '個人制作',
     role: 'プログラマー / レベルデザイナー（全工程）',
     github: 'https://github.com/username/repo',
-    link: null,                         // 公開URLがある場合
+    link: 'https://example.com/',                         // 公開URLがある場合
+    venues: [                           // 出展・公開先（複数可）
+      { name: '学校 卒業制作展示会', date: '2026年2月' },
+    ],
+    techPoints: 'こだわった技術ポイント...',
+    designNotes: '設計上の工夫...',
+    implementationTheme: '実装解説テーマ（1文）',
+    troubleshooting: '詰まった問題と解決策...',
+    performance: 'パフォーマンス改善の工夫...',
+  },
+  {
+    id: 2,                              // 連番（詳細ページのURLに使う）
+    title: '迷宮脱出ゲーム2',
+    genre: '3Dパズルアクション',
+    category: 'game',
+    thumbnail: "",                    // '/images/work1.png'
+    screenshots: [],                    // ['/images/w1-1.png', '/images/w1-2.gif']
+    description: '作品の概要説明...',
+    tags: ['Unity', 'C#', 'ProceduralGeneration'],
+    platform: ['Windows', 'WebGL'],
+    period: '2025年10月〜2026年1月（3ヶ月）',
+    team: '個人制作',
+    role: 'プログラマー / レベルデザイナー（全工程）',
+    github: 'https://github.com/username/repo',
+    link: 'https://example.com/',                         // 公開URLがある場合
+    venues: [                           // 出展・公開先（複数可）
+      { name: '学校 卒業制作展示会', date: '2026年2月' },
+    ],
+    techPoints: 'こだわった技術ポイント...',
+    designNotes: '設計上の工夫...',
+    implementationTheme: '実装解説テーマ（1文）',
+    troubleshooting: '詰まった問題と解決策...',
+    performance: null,
+  },
+  {
+    id: 3,                              // 連番（詳細ページのURLに使う）
+    title: '迷宮脱出ゲーム3',
+    genre: '3Dパズルアクション',
+    category: 'game',
+    thumbnail: "",                    // '/images/work1.png'
+    screenshots: [],                    // ['/images/w1-1.png', '/images/w1-2.gif']
+    description: '作品の概要説明...',
+    tags: ['Unity', 'C#', 'ProceduralGeneration'],
+    platform: ['Windows', 'WebGL'],
+    period: '2025年10月〜2026年1月（3ヶ月）',
+    team: '個人制作',
+    role: 'プログラマー / レベルデザイナー（全工程）',
+    github: 'https://github.com/username/repo',
+    link: 'https://example.com/',                         // 公開URLがある場合
     venues: [                           // 出展・公開先（複数可）
       { name: '学校 卒業制作展示会', date: '2026年2月' },
     ],
